@@ -48,7 +48,10 @@ export function Info({ navigation }: any) {
                         <IconButton icon="cog" style={{ marginStart: "auto" }} mode="contained" selected={true} onPress={() => navigation.navigate("Settings", { role: userData.role })} />
                     </View>
                     <View style={{ alignItems: "center", marginTop: "auto", margin: "5%" }}>
-                        <Text variant="displayLarge">{userData.balance + " PC"}</Text>
+                        <View style={{ display:"flex", flexDirection:"row", alignItems:"center" }}>
+                            <Text variant="displayLarge">{userData.balance}</Text>
+                            <Avatar.Image size={48} source={require("../../assets/coin.png")} style={{marginLeft:"3%"}}/>
+                        </View>
                     </View>
                     <View style={{ marginStart: "5%", marginTop: "auto", marginBottom: "5%", display: "flex", flexDirection: "row" }}>
                         <Text variant="labelLarge" style={{ overflow: "hidden" }}>{userData.school.name.replace(/(.{20})..+/, "$1...")}</Text>

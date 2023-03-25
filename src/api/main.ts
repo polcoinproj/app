@@ -6,7 +6,7 @@ import { ImageInfo } from "expo-image-picker";
 export class Api {
     private apiUrl = __DEV__
         ? "http://127.0.0.1:1756/api"
-        : "https://swrastcoin.ctw.re/api";
+        : "https://polcoin.ctw.re/api";
 
     async generateNewToken() {
         setRecoil(tokenState, await this.login(getRecoil(credentialsState)));
